@@ -1,0 +1,354 @@
+<head>
+<title>Issue Manager - Free/Standard Version 2.0</title>
+</head>
+
+<p align="center"><b><font face="Verdana" size="3">UltraApps Issue Manager<br>
+Standard/Free Version 2.0</font></b>
+<p><b><font face="Verdana">Introduction</font></b></p>
+<p><font face="Verdana" size="2">Issue Manager is a web-based application designed to help a
+workgroup keep track of issues and tasks via a shared central resource. The system was designed
+specifically with the IT department in mind, where quick access to shared data and history is a
+requirement, both from a internal organizational perspective, as well as to fulfill the needs of the
+customers.</font></p>
+<p><font face="Verdana" size="2">The data is stored centrally on the server, which make it specially
+suitable for distributed teams who can use just the web browser to access it. <span style="mso-bidi-font-size: 12.0pt">No
+local software needs to be installed on the client and all web browsers are supported.</span></font></p>
+<p><font face="Verdana"><span style="mso-bidi-font-size: 12.0pt"><font size="2">The application
+itself can be installed virtually on any web server, whether internal within the organization, or
+external, hosted by a web hosting company.</font></span><font size="2"> <span style="mso-bidi-font-size: 12.0pt">Several
+distribution versions are provided, including ASP and C# for installation Windows servers. The
+distributions do not include any custom components and full source code is available for examination
+and customization.</span></font></font></p>
+<p><font face="Verdana" size="2">Additionally, you may add your own logo in the header, change color
+scheme via CSS (Cascading Style Sheets), or even remove, add or rename fields shown on the screen.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Verdana">Site Diagram</font></b></p>
+<p><font face="Verdana" size="2"><img border="0" src="detail0.gif" width="685" height="475"></font></p>
+<p><font face="Verdana" size="2"><br>
+</font></p>
+<p><font face="Verdana" size="2">The above <b>Site Diagram</b> illustrates relations between all
+pages that make up the application.<br>
+</font></p>
+<p>&nbsp;</p>
+<strong><font face="Verdana" size="3">Access/Security</font></strong>
+<p><font size="2" face="Verdana">Issue Manager requires User Login and it is configured with 3
+default users and 4 security levels, as shown below.</font></p>
+<table border="1" width="100%" cellspacing="0" bordercolor="#000080">
+<tbody>
+<tr>
+<td width="33%"><b><font size="2" face="Verdana">Default Login</font></b></td>
+<td width="34%"><b><font size="2" face="Verdana">Default Password</font></b></td>
+<td width="34%"><b><font size="2" face="Verdana">Security Level</font></b></td>
+</tr>
+<tr>
+<td width="33%"><font size="2" face="Verdana">guest</font></td>
+<td width="34%"><font size="2" face="Verdana">guest</font></td>
+<td width="34%"><font size="2" face="Verdana">1 - Standard</font></td>
+</tr>
+<tr>
+<td width="33%"><font size="2" face="Verdana">tom</font></td>
+<td width="34%"><font size="2" face="Verdana">tom</font></td>
+<td width="34%"><font size="2" face="Verdana">2 - Manager</font></td>
+</tr>
+<tr>
+<td width="33%"><font size="2" face="Verdana">admin</font></td>
+<td width="34%"><font size="2" face="Verdana">admin</font></td>
+<td width="34%"><font size="2" face="Verdana">3 - Administrator</font></td>
+</tr>
+</tbody>
+</table>
+<p><font size="2" face="Verdana">In the user administration section Issue Manager displays User
+Types: Customer, Developer and Administrator, which are just a sample data and can be modified
+within the application code. Issue Manager doesn't distinguish the names but uses numeric Security
+Levels (1, 2 and 3) as follows:&nbsp;</font></p>
+<p><font size="2" face="Verdana">Security Level 1:<br>
+All users who are configured in the system must be assigned the minimum security level = 1, and are
+automatically allowed to submit, view and respond to all issues.</font></p>
+<p><font size="2" face="Verdana">Security Level 2:<br>
+This security level can be assigned to users only by the administrator, and permits those users to
+access some of the administrative areas.</font></p>
+<p><font size="2" face="Verdana">Security Level 3:<br>
+This is the highest security level available only to administrators and allows them to modify and
+delete users, configure system settings, and modify existing issues and responses.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Verdana">Login Panel</font></b></p>
+<p><font face="Verdana" size="2">All users trying to access Issue Manager are required to login with
+a username and password supplied by the administrator. By default the application has one
+administrator account with the username <b>admin</b> and password <b>admin</b>. Use these
+credentials to log-in for the first time.</font></p>
+<p><font face="Verdana">
+<img border="0" src="detail1.gif" width="529" height="379"><br>
+</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Verdana">Main Panel</font></b></p>
+<p><font face="Verdana" size="2">As soon as you Login, you should see the main screen of the system.
+This panel displays all the issues and their summaries</font></p>
+<p><img border="0" src="detail2.gif" width="745" height="534"><font face="Verdana" size="2"><br>
+</font></p>
+<p><font face="Verdana" size="2">The following sections make up the panel:</font></p>
+<p><font face="Verdana" size="2">- <b>Issue List</b><br>
+This is the main grid on the page, and it lists all issues according to the last submitted search
+criteria.<br>
+The issue list can be sorted by any of the available columns by simply clicking on column heading.</font></p>
+<p><font face="Verdana" size="2">- <b>Issue Search<br>
+</b>The user can search all issues by submitting search criteria in the <b>Search</b> section. The
+full-text search can be performed on the keyword provided, or the user may choose to select on of
+preset condition using provided drop-down lists.</font></p>
+<p><font face="Verdana" size="2"><b>- Bookmarks<br>
+</b>Bookmarks allows the user to view particular issues based on the user currently logged-in.</font></p>
+<p><font face="Verdana" size="2"><b>- Summary</b><br>
+This section shows the number of issues in each of the the statuses.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Verdana">Submitting New Issues</font></b></p>
+<p><font face="Verdana" size="2">Users can submit new Issues to to system by clicking &quot;Add New
+Issue&quot; link that is always shown in the header.<br>
+The user then enters Issue Name and Issue Description and selects various parameters regarding the
+issue, such as the Priority and Status, as well as the Person assigned to the Issue.<br>
+The User may also upload a file related to the issue, but only if he is permitted to do so, which is
+specified in his User Profile.</font></p>
+<p><img border="0" src="detail14.gif" width="618" height="556"></p>
+<p>&nbsp;</p>
+<p><b><font face="Verdana">Viewing and Responding to Issues</font></b></p>
+<p><font face="Verdana" size="2">When the user clicks on any of the issues in the in <b>Issue List</b>
+of the <b>Main Panel</b> , he is presented with the <b>Issue Detail Panel</b> that provides full
+information about this issue.</font></p>
+<p><img border="0" src="detail3.gif" width="768" height="558"><br>
+</p>
+<p><font face="Verdana" size="2">The following sections make up the Issue Details Panel</font></p>
+<p><font face="Verdana" size="2">- <b>Issue Description</b><br>
+This section contains full details of the original issue posted.</font></p>
+<p><font face="Verdana" size="2">- <b>Issue Response History</b><br>
+The Response History section shows all the responses made to the current issue with their relevant
+response details.</font></p>
+<p><font face="Verdana" size="2">- <b>Issue Response</b><br>
+This section allows the user to submit new response to the currently selected 
+issue. This sections also facilitates re-assignment the issue to a new user, 
+updating the priority of the issue,
+updating the status of the issue and uploading a file attachment.</font></p>
+<p><font face="Verdana" size="2"><b>- Attached Files</b><br>
+This section shows the list of files attached with this issue. </font></p>
+<p><font face="Verdana" size="2">Upon submitting the response , the system verifies if the user is permitted to upload files (if
+he is submitting a file). After the response is accepted, the system records it in the database and
+emails all appropriate parties.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Verdana">My Profile Panel</font></b></p>
+<p><font face="Verdana" size="2">The My Profile Panel lets the user modify his 
+password, e-mail and notification options.&nbsp; </font></p>
+<p><img border="0" src="detail16.gif" width="471" height="339"></p>
+<p>&nbsp;</p>
+<p><b><font face="Verdana">Administration Panel</font></b></p>
+<p><font face="Verdana" size="2">The Administration Panel is only assessable to users with <b>developer</b>
+or <b>administration</b> security access.</font></p>
+<p><font face="Verdana" size="2">
+<img border="0" src="detail4.gif" width="534" height="462"><br>
+</font></p>
+<p><font face="Verdana" size="2">The Administration Panel gives access to the following panels:<br>
+1) <b>Users Administration Panel</b> - Allows users to view/add/update/delete users and their
+preferences.<br>
+2) Priorities Administration Panel - Allows users to view/add/update/delete various priorities to be
+used for the issues along with the colors to be used to display each of them.<br>
+3) <b>Statuses Administration Panel</b> - Allows users to view/add/update/delete various statuses
+that can be set on issues.<br>
+4) <b>Issue Administration Panel</b> - Allows users to view/update/delete the issues present in the
+applications along with their full response history.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Verdana">Application Settings Panel</font></b></p>
+<p><font face="Verdana" size="2">After you install Issue Manager, you should configure the system
+for your needs.<br>
+<b>Application Settings Panel</b> is accessible via the <b>Administration Panel</b>.</font></p>
+<p><font face="Verdana"><img border="0" src="detail15.gif" width="653" height="462"></font></p>
+<p><font face="Verdana" size="2">The following parameters are used to configure the system:</font></p>
+<table bordercolor="#000080" border="1" cellspacing="0" cellpadding="3">
+<tr>
+<td class="FieldCaptionTD" nowrap><font face="Verdana" size="2"><b>Upload File Extensions</b></font></td>
+<td class="DataTD"><font face="Verdana" size="2">Specify file extensions that you allow users to
+upload. For security reasons avoid executable extensions such JavaScript (.js) or Programs (.exe).
+File extensions should be separated by commas.</font></td>
+</tr>
+<tr>
+<td class="FieldCaptionTD" nowrap><font face="Verdana" size="2"><b>Upload File Path</b></font></td>
+<td class="DataTD"><font face="Verdana" size="2">Specify server path where the files should be
+uploaded. This is <b>relative</b> to the location where Issue Manager is installed.</font></td>
+</tr>
+<tr>
+<td class="FieldCaptionTD" nowrap><font face="Verdana" size="2"><b>Notify E-mail From (New Issue)</b></font></td>
+<td class="DataTD"><font face="Verdana" size="2">Email address to be used as &quot;From&quot;
+address when sending Email Alerts about new Issues</font></td>
+</tr>
+<tr>
+<td class="FieldCaptionTD" nowrap><font face="Verdana" size="2"><b>Notify E-mail Subject (New Issue)</b></font></td>
+<td class="DataTD"><font face="Verdana" size="2">The Subject of the Email Alert regarding New
+Issues. The Subject uses template format and allows you to enter {issue_no} tag, which will be
+replaced with the current issue number when sending emails.</font></td>
+</tr>
+<tr>
+<td class="FieldCaptionTD" nowrap><font face="Verdana" size="2"><b>Notify E-mail Body (New Issue)</b></font></td>
+<td class="DataTD"><font face="Verdana" size="2">The Body Template of the Email Alert regarding New
+Issues. The Body uses template format and allows you to use the following tags: {issue_receiver},
+{issue_title}, {issue_url} and {issue_poster}. When sending emails, template tags will be replaced
+with the current issue information.</font></td>
+</tr>
+<tr>
+<td class="FieldCaptionTD" nowrap><font face="Verdana" size="2"><b>Notify E-mail From (Issue Change)</b></font></td>
+<td class="DataTD"><font face="Verdana" size="2">Email address to be used as &quot;From&quot;
+address when sending Email Alerts about Responses to Issues</font></td>
+</tr>
+<tr>
+<td class="FieldCaptionTD" nowrap><font face="Verdana" size="2"><b>Notify E-mail Subject (Issue
+Change)</b></font></td>
+<td class="DataTD"><font face="Verdana" size="2">The Subject of the Email Alert regarding Responses
+to Issues. The Subject uses template format and allows you to enter {issue_no} tag, which will be
+replaced with the current issue number when sending emails.</font></td>
+</tr>
+<tr>
+<td class="FieldCaptionTD" nowrap><font face="Verdana" size="2"><b>Notify E-mail Body (Issue Change)</b></font></td>
+<td class="DataTD"><font face="Verdana" size="2">The Body Template of the Email Alert regarding
+Responses to Issues. The Body uses template format and allows you to use the following tags:
+{issue_receiver}, {issue_title}, {issue_url} and {issue_poster}. When sending emails, template tags
+will be replaced with the current issue information.</font></td>
+</tr>
+</table>
+<p><font face="Verdana" size="2" color="#FF0000"><b>ATTENTION:</b><br>
+For the <b>Email</b> feature to work properly, the system needs to have standard Windows NT <b>CDONTS</b>
+component installed. Please contact your system administrator if you see CDONTS errors when
+submitting Issues.<br>
+Additional CDONTS information can be found <a href="http://www.google.com/search?q=CDONTS">here</a>.</font></p>
+<p><font face="Verdana" size="2" color="#FF0000"><b>ATTENTION:</b><br>
+For <b>File Upload</b> functionality to work properly, the administrator needs to install Free
+Dundas Upload component, available here: <a href="http://www.dundas.com/subFrame.asp?products/asp/Upload/index.asp">http://www.dundas.com/subFrame.asp?products/asp/Upload/index.asp</a> 
+for the ASP version of Issue Manager.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Verdana">User Administration Panel</font></b></p>
+<p><font face="Verdana" size="2">This panel can be selected from the <b>Administration Panel.</b><br>
+<br>
+<img border="0" src="detail5.gif" width="501" height="291"><br>
+</font></p>
+<p><font face="Verdana" size="2">The <b>Users Administration Panel</b> presents the list of users
+along with their e-mail addresses, security privileges and File Upload indicator. Users with <i>Manager</i>
+security access can view this page while <i>Administrators</i> can click on a username to
+view/update/delete the details of a particular user.<br>
+<i>Administrators</i> can also add new users to the application.<br>
+In case there are a large number of users, users can be sorted based on usernames or their e-mail
+addresses.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Verdana">Users Detail/New User Panel</font></b></p>
+<p><font face="Verdana" size="2">The administrator can view this panel by selecting the user from
+the <b>User Administration Panel</b> list.</font></p>
+<p><font face="Verdana" size="2"><img border="0" src="detail6.gif" width="526" height="351"><br>
+</font></p>
+<p><font face="Verdana" size="2">This panel allows the <i>administrator</i> to set a new password
+for the user, update the security level of the user as well as update users details and permissions.<br>
+Permissions work as follows:</font></p>
+<table border="1" cellspacing="0" cellpadding="2" bordercolor="#000080">
+<tr>
+<td class="FieldCaptionTD"><font face="Verdana" size="2"><b>User can upload files?</b></font></td>
+<td class="DataTD"><font face="Verdana" size="2">This setting specifies if the user is allowed to
+upload new files when submitting or responding to issues.</font></td>
+</tr>
+<tr>
+<td class="FieldCaptionTD"><font face="Verdana" size="2"><b>Notify when new Issue is assigned to
+user?</b></font></td>
+<td class="DataTD"><font face="Verdana" size="2">An Email Alert is sent to this user when a new
+Issue is entered in the system and assigned to this user.</font></td>
+</tr>
+<tr>
+<td class="FieldCaptionTD"><font face="Verdana" size="2"><b>Notify when Issue originated by user
+changes?</b></font></td>
+<td class="DataTD"><font face="Verdana" size="2">An Email Alert is sent to this user when an Issue
+originated by this user was responded to.</font></td>
+</tr>
+<tr>
+<td class="FieldCaptionTD"><font face="Verdana" size="2"><b>Notify when Issue assigned to user
+changes?</b></font></td>
+<td class="DataTD"><font face="Verdana" size="2">An Email Alert is sent to this user when an Issue
+assigned to this user was responded to. This usually happens when the user responds to his own
+issue, but others are allowed to respond as well.</font></td>
+</tr>
+</table>
+<p><font face="Verdana" size="2" color="#FF0000"><b>ATTENTION:</b><br>
+For the Email feature to work properly, the system needs to have standard Windows NT CDONTS
+component installed. Please contact your system administrator if you see errors related to CDONTS.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Verdana">Priority Administration Panel</font></b></p>
+<p><font face="Verdana" size="2">This panel can be accessed from the <b>Administration Panel</b> and
+allows a user with <i>developer</i> or <i>administrator</i> security access to
+view/add/update/delete <i>priorities </i>to be used for the issues.</font></p>
+<p><img border="0" src="detail7.gif" width="476" height="481"><font face="Verdana" size="2"><br>
+</font></p>
+<p><font face="Verdana" size="2">This panel shows the list of priories available along with the
+colors to be used to display them on various pages and the order in which they should appear. It is
+recommended that before starting to the application priorities not applicable to your issues should
+be removed, although this step can performed afterwards too.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Verdana">Priority Detail/New Priority Panel</font></b></p>
+<p><font face="Verdana" size="2">This panel can be accessed by both <i>developers</i> and <i>administrators</i>
+from the <b>Priority Administration Panel</b>.</font></p>
+<p><font face="Verdana" size="2"><img border="0" src="detail8.gif" width="476" height="439"><br>
+</font></p>
+<p><font face="Verdana" size="2">The user can use this panel to update the priority name, color and
+order. He can also delete an unwanted priority from this panel.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Verdana">Status List</font></b></p>
+<p><font face="Verdana" size="2"><i>Developers</i> and <i>Administrators</i> can select this panel
+from the <b>Administration Panel</b>. This panel enables the user to view/add/update/delete <i>statuses</i>
+used in the issues.</font></p>
+<p><font face="Verdana" size="2"><img border="0" src="detail9.gif" width="463" height="540"><br>
+</font></p>
+<p><font face="Verdana" size="2">This panel shows a sortable list of available statuses. It is
+recommended that before starting to the application statuses not applicable to your issues should be
+removed, although this step can performed afterwards too.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Verdana">Status Detail/New Status Panel</font></b></p>
+<p><font face="Verdana" size="2"><i>Developers</i> and <i>Administrators</i> can select this panel
+from, the <b>Statuses Administration Panel </b>by clicking on any of the available statuses.</font></p>
+<p><font face="Verdana" size="2"><img border="0" src="detail10.gif" width="452" height="377"><br>
+</font></p>
+<p><font face="Verdana" size="2">This panel can be used to update/delete the selected status.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Verdana">Issue Administration Panel</font></b></p>
+<p><font face="Verdana" size="2">This panel can only be accessed by <i>administrators</i> from the <b>Administration
+Panel</b>.</font></p>
+<p><font face="Verdana" size="2"><img border="0" src="detail11.gif" width="682" height="505"><br>
+</font></p>
+<p><font face="Verdana" size="2">This panel consists of the following sections:</font></p>
+<p><font face="Verdana" size="2">- <b>Search</b><br>
+The administrator can search all issues by submitting search criteria in the <b>Search</b> section.
+The full-text search can be performed on the keyword provided, or the user may choose to select on
+of preset condition using provided drop-down lists.</font></p>
+<p><font face="Verdana" size="2">- <b>Issue List</b><br>
+This is the main grid on the page, and it lists all issues according to the last submitted search
+criteria.<br>
+The issue list can be sorted by any of the available columns by simply clicking on column heading.
+Clicking on any of the issue will open the <b>Issue Details Administration Panel</b>.</font></p>
+<p>&nbsp;</p>
+<p><b><font face="Verdana">Issue Detail Administration Panel</font></b></p>
+<p><font face="Verdana" size="2">This panel can only be accessed by <i>administrators </i>from the <b>Issue
+Administration Panel</b>.</font></p>
+<p><font face="Verdana" size="2"><img border="0" src="detail12.gif" width="768" height="558"><br>
+</font></p>
+<p><font face="Verdana" size="2">This panel has the following sections:</font></p>
+<p><font face="Verdana" size="2"><b>- Issue Details<br>
+</b>This section contains the details selected issue and you can make changes to them, and update
+the changes. The administrator can also use the <b>Delete with all Responses</b> button to delete an
+issue along with all the responses made to the selected issue.</font></p>
+<p><font face="Verdana" size="2"><b>- Response History<br>
+</b>This section lists all the responses made to the selected issue, after each response there is an
+<b>Edit</b> link, which links to the <b>Response Administration Panel</b>.</font></p>
+<p><font face="Verdana" size="2"><b>- Attached Files</b><br>
+This section lists all the files attached to the selected issue, after besides 
+each file description there is a <b>Edit</b> link, which links to the <b>File 
+Administration Panel.</b></font></p>
+<p><font face="Verdana"><b>Response Administration Panel</b></font></p>
+<p><font face="Verdana" size="2">This panel can be called by the <i>administrator</i> from the <b>Issue
+Details Administration Panel</b>.</font></p>
+<p><font face="Verdana" size="2"><img border="0" src="detail13.gif" width="591" height="531"><br>
+</font></p>
+<p><font face="Verdana" size="2">This panel allows the administrator to Update/Delete the response
+made to a particular issue.</font></p>
+<p><b><font face="Verdana">File Administration Panel</font></b></p>
+<p><font face="Verdana" size="2">This panel can be called by the <i>administrator</i> from the <b>Issue
+Details Administration Panel</b>.</font></p>
+<p><img border="0" src="detail17.gif" width="436" height="152"></p>
+<p><font face="Verdana" size="2">This panel allows the administrator to Update/Delete the 
+files attached to a particular issue.</font></p>
+<p><font face="Verdana" size="2">Copyright (C) 2001 <a href="http://www.ultraapps.com">UltraApps.com</a></font></p>

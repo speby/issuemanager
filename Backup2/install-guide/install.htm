@@ -1,0 +1,90 @@
+<h1><font face="Verdana" size="2">UltraApps Issue Manager v2.0 Beta Installation 
+Guide (ASP.NET version)</font></h1>
+<h3><font face="Verdana" size="2">System Requirements<br>
+1) Windows 2000 (Service Pack 2) / Windows XP<br>
+2) IIS<br>
+3) MDAC 2.7 <br>
+4) .NET Framework SDK Beta2 / ASP.NET Premium Edition Beta2<br>
+5) WinZip or similar program</font></h3>
+<h2><font face="Verdana" size="2">Installation</font></h2>
+<p><font face="Verdana" size="2">1) Download the <b>IssueManager</b> Zip 
+file from <a href="http://www.ultraapps.com/appdownload1.asp?app_id=1">
+http://www.ultraapps.com/appdownload1.asp?app_id=1</a>. Once you agree to the 
+license agreement you can download ASP.NET version of IM.&nbsp; </font></p>
+<p><font face="Verdana" size="2">2) Once you have the downloaded the zip file, extract the files to your hard 
+disk, be sure you have '<b>Use folder names</b>' option checked while unzipping. 
+You can directly unzip the files into your IIS directory i.e. <i>
+C:\InetPub\wwwroot\</i>. This will automatically create a directory called <b>
+IssueManager</b> and extract all the application files within that directory. 
+(If you are installing the application into some directory other than 
+c:\Inetpub\wwwroot\IssueManager be sure to complete step number 5.)</font></p>
+<p><font face="Verdana" size="2">
+<img border="0" src="install0.gif" width="505" height="339"><br>
+<b>Figure 1: </b>Unzipping the files</font></p>
+<p><font face="Verdana" size="2">3) Next, we convert the <b>IssueManager</b> 
+directory into a <b>Virtual Directory</b>. On Windows 2000 you can use the <b>
+Internet Services Manager</b> available from <b>Start -&gt; Control Panel -&gt; 
+Administrative Tools -&gt; Internet Services Manager</b>. From within Internet 
+Services manager select the <b>Default Web Site</b> tab and then from the <b>
+Action</b> menu choose <b>New -&gt; Virtual Directory</b>. </font></p>
+<p><img border="0" src="install1.gif" width="640" height="452"><br>
+<font face="Verdana" size="2"><b>Figure 2:</b> Create a new Virtual Directory</font></p>
+<p><font face="Verdana" size="2">4) In the <i>New Virtual Directory Creation</i> 
+dialog click next and you will be presented with a screen as shown above in 
+Figure 2. Enter the <i>Alias</i> as <b>IssueManager </b>and click next. Then 
+enter the path to the actual directory containing the Web Application i.e. <i>
+C:\Inetpub\wwwroot\IssueManager</i> (in our example) and click next. Keep the
+<i>Access Permissions</i> at their default values and click next twice to finish 
+the Virtual Directory creation.</font></p>
+<p><font face="Verdana" size="2">5) In the <b>Internet Services Manager</b> 
+panel select the <b>IssueManager </b>Virtual Directory you created in the above 
+step and expand it to view all the files and folders. Now select the <b>Uploads</b> 
+directory and <i>right-click</i> it and select <b>Properties</b> from the 
+Context Menu. From the <b>Directory Properties</b> dialog select <b>write</b> to 
+give this directory access to write files. You will need this so that you can 
+upload files to the server.<br>
+<br>
+<img border="0" src="install2.gif" width="461" height="435">&nbsp;<br>
+<b>Figure 3:</b> Add Write Access</font></p>
+<p><font face="Verdana" size="2">6) If you have installed the application into 
+some directory other than C:\Inetpub\wwwroot\IssueManager then you will have 
+to modify the path to the database file before your application installation is 
+complete (others can skip this step). Start <b>notepad</b> (or any other text 
+editor) and open the <b>web.config</b> file from the <i>IssueManager</i> 
+directory.<br>
+Also if you want to use Ms SQL as your database you will have to update the below line 
+to something like <br>
+<b>Provider=SQLOLEDB.1;Persist Security Info=False;User ID=sa;Initial Catalog=IssueManager;Data 
+Source=Localhost<br>
+</b>To use the MS SQL OleDb provider to connect to the IssueManager database.</font></p>
+<p><img border="0" src="install3.gif" width="609" height="165"><br>
+<font face="Verdana" size="2"><b>Figure 4:</b> web.config file</font></p>
+<p><font face="Verdana" size="2">Now find the line highlighted in Figure 3 and 
+replace it with the path to the database file in your installation. Once done, 
+save and close the file.</font></p>
+<p><font face="Verdana" size="2">7) The above steps complete the installation. 
+To test your installation start your browser and enter the url to the IssueManager i.e <i>http://localhost/IssueManager</i>. If your 
+installation went correct then you should be presented with a log-in screen 
+similar to the one shown in Figure 4.</font></p>
+<p><img border="0" src="install4.gif" width="517" height="400"><br>
+<font face="Verdana" size="2"><b>Figure 5:</b> Login Screen</font></p>
+<p><font face="Verdana" size="2">By default IssueManager has one 
+administrator account with the username <b>admin</b> and password <b>admin</b>. 
+Use these credentials to log-in for the first time. </font></p>
+<p><font face="Verdana" size="2">7) Once you have logged-in go to the <b>
+Administration</b> panel and select <b>Users</b>. The next screen contains a 
+list of available users. You can either edit a user profile by selecting a user 
+or add a new user/moderator/administrator.</font></p>
+<p><img border="0" src="install5.gif" width="548" height="371"><br>
+<font face="Verdana" size="2"><b>Figure 6:</b> User List</font></p>
+<p><font face="Verdana" size="2">8) Select the <b>Administrator</b> from the <i>
+User List</i> page, and from the <i>Administrator Details</i> page enter a new 
+password in the password field and select <b>Update</b> to change the 
+Administrator password. (We strongly recommend you change the Administrator 
+Password in order to prevent misuse of your application!) Once you have added 
+the necessary users your setup is complete and you can begin to use Issue 
+Manager! </font></p>
+<p><img border="0" src="install6.gif" width="524" height="538"><br>
+<font face="Verdana" size="2"><b>Figure 6:</b> User Maintenance</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>

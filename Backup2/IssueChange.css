@@ -1,0 +1,10 @@
+.HistoryFormTABLE {border: 1px solid #F0F0F0} 
+.HistoryFormHeaderTD {background-color: #FF6600; text-align: Center; border: 1px solid #F0F0F0} 
+.HistoryFormHeaderFONT {font-family: Arial, Tahoma, Verdana, Helvetica; font-size: 12pt; color: #FFFFFF; font-weight: bold} 
+.HistoryFieldCaptionTD {background-color: #669900; border: 1px solid #F0F0F0} 
+.HistoryFieldCaptionFONT {font-family: Arial, Tahoma, Verdana, Helvetica; color: #FFFFFF; font-size: 10pt} 
+.HistoryDataTD {background-color: #99AAAA; border: 1px solid #F0F0F0} 
+.HistoryDataFONT {font-family: Arial, Tahoma, Verdana, Helvetica; color: #000000; font-size: 10pt} 
+.HistoryColumnTD {background-color: #CC3300; border: 1px solid #F0F0F0} 
+.HistoryColumnFONT {font-family: Arial, Tahoma, Verdana, Helvetica; color: #FFFFFF; font-size: 10pt; font-weight: bold} 
+.HistoryRecordSeparatorTD {background-color: #99AAAA; border: 1px solid #F0F0F0}

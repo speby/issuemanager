@@ -1,0 +1,10 @@
+.FooterFormFormTABLE {} 
+.FooterFormFormHeaderTD {background-color: #FF6600; text-align: Center; border: 1px solid #F0F0F0} 
+.FooterFormFormHeaderFONT {font-family: Arial, Tahoma, Verdana, Helvetica; font-size: 12pt; color: #FFFFFF; font-weight: bold} 
+.FooterFormFieldCaptionTD {background-color: #669900; border: 1px solid #F0F0F0} 
+.FooterFormFieldCaptionFONT {font-family: Arial, Tahoma, Verdana, Helvetica; color: #FFFFFF; font-size: 10pt} 
+.FooterFormDataTD {} 
+.FooterFormDataFONT {font-family: Arial, Tahoma, Verdana, Helvetica; color: #000000; font-size: 10pt} 
+.FooterFormColumnTD {background-color: #CC3300; border: 1px solid #F0F0F0} 
+.FooterFormColumnFONT {font-family: Arial, Tahoma, Verdana, Helvetica; color: #FFFFFF; font-size: 10pt; font-weight: bold} 
+.FooterFormRecordSeparatorTD {}
